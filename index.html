@@ -57,6 +57,13 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.88
 .stat-val em{color:var(--blue);font-style:normal}
 .stat-label{font-size:0.75rem;color:var(--muted);margin-top:6px;font-weight:500}
 
+/* ── TRUST BANNER ── */
+.trust-banner{background:var(--text);padding:0.9rem 2rem;overflow:hidden;position:relative}
+.trust-track{display:flex;gap:3rem;align-items:center;animation:marquee 22s linear infinite;white-space:nowrap;width:max-content}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.9);flex-shrink:0}
+.trust-dot{width:4px;height:4px;background:var(--blue);border-radius:50%;flex-shrink:0}
+
 /* ── CATEGORIES ── */
 .section{max-width:1200px;margin:0 auto;padding:5rem 2rem}
 .sec-head{text-align:center;margin-bottom:3rem}
@@ -240,10 +247,10 @@ footer{background:var(--light);border-top:1px solid var(--border)}
 <!-- HERO -->
 <section class="hero">
   <span class="hero-label">Mor Wala Chowk, Sahiwal</span>
-  <h1>Sahiwal ka<br><em>Computer Shop.</em></h1>
+  <h1>Sahiwal's Most Trusted<br><em>Computer Shop.</em></h1>
   <p class="hero-tagline">
-    Original products. Best prices. Fast WhatsApp orders.<br>
-    <strong>Sab kuch — ek jagah.</strong>
+    Original products. Unbeatable prices. Instant WhatsApp orders.<br>
+    <strong>Everything you need — all in one place.</strong>
   </p>
   <div class="hero-ctas">
     <a href="#products" class="cta-primary">Shop Now</a>
@@ -257,7 +264,25 @@ footer{background:var(--light);border-top:1px solid var(--border)}
   </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- TRUST BANNER -->
+<div class="trust-banner">
+  <div class="trust-track">
+    <span class="trust-item"><span class="trust-dot"></span> 100% Original & Verified Products</span>
+    <span class="trust-item"><span class="trust-dot"></span> Trusted by 500+ Customers in Sahiwal</span>
+    <span class="trust-item"><span class="trust-dot"></span> Instant WhatsApp Response</span>
+    <span class="trust-item"><span class="trust-dot"></span> Best Prices Guaranteed</span>
+    <span class="trust-item"><span class="trust-dot"></span> Local Shop — Visit Us Anytime</span>
+    <span class="trust-item"><span class="trust-dot"></span> No Duplicate Products — Ever</span>
+    <span class="trust-item"><span class="trust-dot"></span> 5-Star Rated by Our Customers</span>
+    <span class="trust-item"><span class="trust-dot"></span> 100% Original & Verified Products</span>
+    <span class="trust-item"><span class="trust-dot"></span> Trusted by 500+ Customers in Sahiwal</span>
+    <span class="trust-item"><span class="trust-dot"></span> Instant WhatsApp Response</span>
+    <span class="trust-item"><span class="trust-dot"></span> Best Prices Guaranteed</span>
+    <span class="trust-item"><span class="trust-dot"></span> Local Shop — Visit Us Anytime</span>
+    <span class="trust-item"><span class="trust-dot"></span> No Duplicate Products — Ever</span>
+    <span class="trust-item"><span class="trust-dot"></span> 5-Star Rated by Our Customers</span>
+  </div>
+</div>
 
 <!-- CATEGORIES -->
 <div class="section" id="categories">
