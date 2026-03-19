@@ -18,7 +18,7 @@ body{background:var(--white);color:var(--text);font-family:'Plus Jakarta Sans',s
 a{text-decoration:none;color:inherit}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
+nav{position:fixed;top:40px;width:100%;z-index:300;background:rgba(255,255,255,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:62px}
 .logo{display:flex;align-items:center;gap:10px}
 .logo-mark{width:34px;height:34px;background:var(--text);border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -39,8 +39,7 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92
 .nav-wa svg{width:14px;height:14px;fill:white;flex-shrink:0}
 
 /* ── HERO ── */
-.hero{text-align:center;padding:110px 2rem 80px;background:var(--white)}
-.hero-inner{max-width:780px;margin:0 auto}
+.hero{text-align:center;padding:175px 2rem 90px;background:var(--white)}
 .hero-label{font-size:0.78rem;font-weight:600;color:var(--blue);letter-spacing:0.5px;margin-bottom:1.2rem;display:block;text-transform:uppercase}
 .hero h1{font-size:clamp(3rem,7.5vw,6.5rem);font-weight:800;line-height:1.02;letter-spacing:-3px;color:var(--text);margin-bottom:1.3rem}
 .hero h1 em{color:var(--blue);font-style:normal}
@@ -59,66 +58,14 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92
 .stat-label{font-size:0.75rem;color:var(--muted);margin-top:6px;font-weight:500}
 
 /* ── TRUST BANNER ── */
-.trust-banner{background:var(--text);padding:0.85rem 0;overflow:hidden;width:100%}
+.trust-banner{background:var(--text);padding:0.9rem 2rem;overflow:hidden;position:relative}
 .trust-track{display:flex;gap:3rem;align-items:center;animation:marquee 22s linear infinite;white-space:nowrap;width:max-content}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .trust-item{display:flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.9);flex-shrink:0}
 .trust-dot{width:4px;height:4px;background:var(--blue);border-radius:50%;flex-shrink:0}
 
-/* ── URGENCY TIMER ── */
-.urgency-bar{background:#fff8f0;border-top:1px solid #ffe0c2;border-bottom:1px solid #ffe0c2;padding:0.85rem 0;width:100%}
-.urgency-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap}
-.urgency-label{font-size:0.82rem;font-weight:600;color:#b45309}
-.urgency-label strong{color:#92400e}
-.timer-blocks{display:flex;align-items:center;gap:0.4rem}
-.tblock{background:white;border:1.5px solid #fed7aa;border-radius:8px;padding:0.35rem 0.7rem;text-align:center;min-width:48px}
-.tblock-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:#b45309;line-height:1;display:block}
-.tblock-label{font-size:0.55rem;text-transform:uppercase;letter-spacing:0.5px;color:#d97706;font-weight:600}
-.tsep{font-size:1.2rem;font-weight:800;color:#f59e0b;margin-bottom:0.5rem}
-.urgency-cta{background:#f59e0b;color:white;padding:0.4rem 1rem;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none;transition:background 0.2s;white-space:nowrap}
-.urgency-cta:hover{background:#d97706}
-
-/* ── ROI CALCULATOR ── */
-.roi-section{background:var(--text);width:100%}
-.roi-inner{max-width:1000px;margin:0 auto;padding:5rem 2rem}
-.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:3rem}
-.roi-form-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:2rem}
-.roi-result-card{background:var(--blue);border-radius:24px;padding:2rem;position:relative;overflow:hidden}
-.roi-result-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.08);border-radius:50%}
-.roi-result-card::after{content:'';position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;background:rgba(255,255,255,0.05);border-radius:50%}
-.roi-field{margin-bottom:1.2rem}
-.roi-field label{display:block;font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.5px}
-.roi-field input,.roi-field select{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:0.65rem 1rem;color:white;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.2s}
-.roi-field input:focus,.roi-field select:focus{border-color:rgba(255,255,255,0.4)}
-.roi-field input::placeholder{color:rgba(255,255,255,0.3)}
-.roi-field select option{background:#1d1d1f;color:white}
-.roi-calc-btn{width:100%;background:var(--blue);color:white;border:none;border-radius:10px;padding:0.8rem;font-size:0.9rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
-.roi-calc-btn:hover{background:var(--blue2)}
-.roi-result-label{font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem}
-.roi-result-value{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:800;color:white;letter-spacing:-1.5px;line-height:1;margin-bottom:0.2rem;position:relative;z-index:1}
-.roi-result-sub{font-size:0.78rem;color:rgba(255,255,255,0.65);margin-bottom:2rem;position:relative;z-index:1}
-.roi-breakdown{border-top:1px solid rgba(255,255,255,0.15);padding-top:1.2rem;position:relative;z-index:1}
-.roi-row{display:flex;justify-content:space-between;align-items:center;padding:0.4rem 0;font-size:0.82rem}
-.roi-row-label{color:rgba(255,255,255,0.6)}
-.roi-row-val{font-weight:700;color:white}
-.roi-row-val.pos{color:#4ade80}
-.roi-row-val.neg{color:#fca5a5}
-.roi-note{margin-top:1.5rem;background:rgba(255,255,255,0.08);border-radius:10px;padding:0.9rem 1rem;font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:1.6;position:relative;z-index:1}
-.roi-note strong{color:white}
-@media(max-width:768px){
-  .urgency-inner{gap:0.8rem}
-  .roi-grid{grid-template-columns:1fr;gap:1.5rem}
-  .roi-result-value{font-size:2rem}
-}
-@media(max-width:480px){
-  .urgency-bar{padding:0.7rem 1rem}
-  .tblock-num{font-size:1rem}
-  .tblock{min-width:38px;padding:0.3rem 0.5rem}
-}
-
 /* ── CATEGORIES ── */
-.section{width:100%}
-.section-inner{max-width:1200px;margin:0 auto;padding:5rem 2rem}
+.section{max-width:1200px;margin:0 auto;padding:5rem 2rem}
 .sec-head{text-align:center;margin-bottom:3rem}
 .sec-eyebrow{font-size:0.72rem;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.6rem}
 .sec-title{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;letter-spacing:-0.8px;color:var(--text)}
@@ -131,7 +78,7 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92
 .cat-sub{font-size:0.72rem;color:var(--muted)}
 
 /* ── PRODUCTS ── */
-.products-bg{background:var(--light);width:100%}
+.products-bg{background:var(--light)}
 .products-inner{max-width:1200px;margin:0 auto;padding:5rem 2rem}
 .prods-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
 .see-all{font-size:0.85rem;font-weight:600;color:var(--blue)}
@@ -158,7 +105,7 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92
 .pa-wa svg{width:11px;height:11px;fill:white;flex-shrink:0}
 
 /* ── WHY US ── */
-.why-section{background:var(--text);width:100%}
+.why-section{background:var(--text)}
 .why-inner{max-width:1200px;margin:0 auto;padding:5rem 2rem}
 .why-inner .sec-eyebrow{color:#86b7fe}
 .why-inner .sec-title{color:white}
@@ -173,8 +120,8 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92
 .why-desc{font-size:0.83rem;color:rgba(255,255,255,0.5);line-height:1.65}
 
 /* ── TESTIMONIALS ── */
-.testi-section{background:var(--light);padding:5rem 0;overflow:hidden;width:100%}
-.testi-head{text-align:center;margin-bottom:3.5rem;padding:0 2rem;max-width:1200px;margin-left:auto;margin-right:auto}
+.testi-section{background:var(--light);padding:5rem 0;overflow:hidden}
+.testi-head{text-align:center;margin-bottom:3.5rem;padding:0 2rem}
 .testi-stage{perspective:1200px;width:100%;padding:2rem 0 3rem;position:relative}
 .testi-track{display:flex;gap:1.5rem;transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);padding:0 calc(50% - 200px);will-change:transform}
 .testi-card{flex:0 0 400px;background:white;border:1px solid var(--border);border-radius:24px;padding:2rem;transition:all 0.6s cubic-bezier(0.25,0.46,0.45,0.94);opacity:0.45;transform:scale(0.88) rotateY(12deg);cursor:pointer;transform-style:preserve-3d;box-shadow:0 4px 20px rgba(0,0,0,0.06)}
@@ -198,7 +145,7 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92
 .testi-dot.active{background:var(--blue);width:22px;border-radius:4px}
 
 /* ── CONTACT ── */
-.contact-section{max-width:1200px;margin:0 auto;padding:5rem 2rem;width:100%}
+.contact-section{max-width:1200px;margin:0 auto;padding:5rem 2rem}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .c-info-card{background:var(--light);border-radius:24px;padding:2.5rem;border:1px solid var(--border)}
 .c-info-title{font-size:1.5rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:0.4rem}
@@ -231,7 +178,7 @@ nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.92
 .form-submit:hover{background:var(--blue2)}
 
 /* ── FOOTER ── */
-footer{background:var(--light);border-top:1px solid var(--border);width:100%}
+footer{background:var(--light);border-top:1px solid var(--border)}
 .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 2rem 1.5rem}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
 .footer-logo{display:flex;align-items:center;gap:9px;margin-bottom:0.8rem}
@@ -296,7 +243,7 @@ footer{background:var(--light);border-top:1px solid var(--border);width:100%}
 @keyframes waPulse{0%{transform:scale(1);opacity:0.6}100%{transform:scale(1.9);opacity:0}}
 
 /* ── PRODUCT SEARCH & FILTER ── */
-.filter-bar{background:white;border-bottom:1px solid var(--border);padding:0.85rem 0;position:sticky;top:62px;z-index:100;width:100%}
+.filter-bar{background:white;border-bottom:1px solid var(--border);padding:1rem 0;position:sticky;top:102px;z-index:100}
 .filter-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
 .filter-search{flex:1;min-width:200px;display:flex;align-items:center;gap:8px;background:var(--light);border:1.5px solid var(--border);border-radius:10px;padding:0.55rem 1rem;transition:border 0.2s}
 .filter-search:focus-within{border-color:var(--blue)}
@@ -361,29 +308,51 @@ footer{background:var(--light);border-top:1px solid var(--border);width:100%}
 
 /* ── TABLET (max 1024px) ── */
 @media(max-width:1024px){
+  /* Nav */
   .nav-links{display:none}
   .nav-search{display:none}
-  .hero{padding:100px 1.5rem 60px}
+
+  /* Hero */
+  .hero{padding:140px 1.5rem 70px}
   .hero h1{font-size:clamp(2.4rem,6vw,4.5rem);letter-spacing:-2px}
   .hero-stats{gap:3rem}
-  .section-inner{padding:4rem 1.5rem}
+
+  /* Sections padding */
+  .section{padding:4rem 1.5rem}
   .products-inner{padding:4rem 1.5rem}
   .why-inner{padding:4rem 1.5rem}
   .contact-section{padding:4rem 1.5rem}
-  .footer-inner{padding:2.5rem 1.5rem 1.5rem}
+  footer .footer-inner{padding:2.5rem 1.5rem 1.5rem}
+
+  /* Categories */
   .cats-row{grid-template-columns:repeat(3,1fr);gap:0.8rem}
+
+  /* Products */
   .prods-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* Why Us */
   .why-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* Contact */
   .contact-grid{grid-template-columns:1fr;gap:2rem}
+
+  /* Footer */
   .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+
+  /* Modal */
   .modal-layout{grid-template-columns:1fr}
   .modal-img-side{min-height:160px;border-right:none;border-bottom:1px solid var(--border)}
+
+  /* Admin */
   .admin-body{grid-template-columns:1fr}
   .admin-left{border-right:none;border-bottom:1px solid var(--border);max-height:200px}
-  .filter-bar{top:62px}
+
+  /* Filter bar */
+  .filter-bar{top:102px}
   .filter-count{display:none}
+
+  /* Testimonials */
   .testi-card{flex:0 0 340px}
-  .roi-inner{padding:4rem 1.5rem}
 }
 
 /* ── MOBILE (max 768px) ── */
@@ -522,6 +491,16 @@ footer{background:var(--light);border-top:1px solid var(--border);width:100%}
 </head>
 <body>
 
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar" id="annBar">
+  <div class="ann-bar-inner">
+    <span class="ann-badge">🔥 Limited Time</span>
+    <span class="ann-text">Get <strong>Free Delivery</strong> on orders above Rs. 2,000 in Sahiwal — WhatsApp us now!</span>
+    <span class="ann-badge">⚡ Today Only</span>
+  </div>
+  <button class="ann-close" onclick="document.getElementById('annBar').style.display='none';document.querySelector('nav').style.top='0'">✕</button>
+</div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-wrap">
@@ -551,23 +530,21 @@ footer{background:var(--light);border-top:1px solid var(--border);width:100%}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <span class="hero-label">Mor Wala Chowk, Sahiwal</span>
-    <h1>Sahiwal's Most Trusted<br><em>Computer Shop.</em></h1>
-    <p class="hero-tagline">
-      Original products. Unbeatable prices. Instant WhatsApp orders.<br>
-      <strong>Everything you need — all in one place.</strong>
-    </p>
-    <div class="hero-ctas">
-      <a href="#products" class="cta-primary">Shop Now</a>
-      <a href="https://wa.me/923001234567" class="cta-wa" target="_blank">Order on WhatsApp</a>
-      <a href="#categories" class="cta-ghost">Browse Categories ↓</a>
-    </div>
-    <div class="hero-stats">
-      <div><div class="stat-val">500<em>+</em></div><div class="stat-label">Happy Customers</div></div>
-      <div><div class="stat-val">100<em>%</em></div><div class="stat-label">Original Products</div></div>
-      <div><div class="stat-val">98<em>%</em></div><div class="stat-label">Satisfaction Rate</div></div>
-    </div>
+  <span class="hero-label">Mor Wala Chowk, Sahiwal</span>
+  <h1>Sahiwal's Most Trusted<br><em>Computer Shop.</em></h1>
+  <p class="hero-tagline">
+    Original products. Unbeatable prices. Instant WhatsApp orders.<br>
+    <strong>Everything you need — all in one place.</strong>
+  </p>
+  <div class="hero-ctas">
+    <a href="#products" class="cta-primary">Shop Now</a>
+    <a href="https://wa.me/923001234567" class="cta-wa" target="_blank">Order on WhatsApp</a>
+    <a href="#categories" class="cta-ghost">Browse Categories ↓</a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-val">500<em>+</em></div><div class="stat-label">Happy Customers</div></div>
+    <div><div class="stat-val">100<em>%</em></div><div class="stat-label">Original Products</div></div>
+    <div><div class="stat-val">98<em>%</em></div><div class="stat-label">Satisfaction Rate</div></div>
   </div>
 </section>
 
@@ -591,36 +568,39 @@ footer{background:var(--light);border-top:1px solid var(--border);width:100%}
   </div>
 </div>
 
-<!-- URGENCY TIMER -->
-<div class="urgency-bar">
-  <div class="urgency-inner">
-    <div class="urgency-label">⚡ <strong>Flash Sale Ending In:</strong> Free delivery + 10% off on all orders today!</div>
-    <div class="timer-blocks">
-      <div class="tblock"><span class="tblock-num" id="th">00</span><span class="tblock-label">Hours</span></div>
-      <span class="tsep">:</span>
-      <div class="tblock"><span class="tblock-num" id="tm">00</span><span class="tblock-label">Mins</span></div>
-      <span class="tsep">:</span>
-      <div class="tblock"><span class="tblock-num" id="ts">00</span><span class="tblock-label">Secs</span></div>
-    </div>
-    <a href="https://wa.me/923001234567" class="urgency-cta" target="_blank">Order Now →</a>
-  </div>
-</div>
-
 <!-- CATEGORIES -->
 <div class="section" id="categories">
-  <div class="section-inner">
-    <div class="sec-head">
-      <div class="sec-eyebrow">Browse</div>
-      <div class="sec-title">Shop by Category</div>
-      <div class="sec-sub">Mouse se gaming gear tak — sab kuch ek jagah.</div>
-    </div>
-    <div class="cats-row">
-      <a href="#products" class="cat-item"><span class="cat-emoji">🖱️</span><div class="cat-title">Mouse</div><div class="cat-sub">24 Products</div></a>
-      <a href="#products" class="cat-item"><span class="cat-emoji">⌨️</span><div class="cat-title">Keyboard</div><div class="cat-sub">18 Products</div></a>
-      <a href="#products" class="cat-item"><span class="cat-emoji">🎧</span><div class="cat-title">Headphones</div><div class="cat-sub">15 Products</div></a>
-      <a href="#products" class="cat-item"><span class="cat-emoji">🔌</span><div class="cat-title">Chargers</div><div class="cat-sub">20 Products</div></a>
-      <a href="#products" class="cat-item"><span class="cat-emoji">🎮</span><div class="cat-title">Gaming</div><div class="cat-sub">30 Products</div></a>
-    </div>
+  <div class="sec-head">
+    <div class="sec-eyebrow">Browse</div>
+    <div class="sec-title">Shop by Category</div>
+    <div class="sec-sub">Mouse se gaming gear tak — sab kuch ek jagah.</div>
+  </div>
+  <div class="cats-row">
+    <a href="#products" class="cat-item">
+      <span class="cat-emoji">🖱️</span>
+      <div class="cat-title">Mouse</div>
+      <div class="cat-sub">24 Products</div>
+    </a>
+    <a href="#products" class="cat-item">
+      <span class="cat-emoji">⌨️</span>
+      <div class="cat-title">Keyboard</div>
+      <div class="cat-sub">18 Products</div>
+    </a>
+    <a href="#products" class="cat-item">
+      <span class="cat-emoji">🎧</span>
+      <div class="cat-title">Headphones</div>
+      <div class="cat-sub">15 Products</div>
+    </a>
+    <a href="#products" class="cat-item">
+      <span class="cat-emoji">🔌</span>
+      <div class="cat-title">Chargers</div>
+      <div class="cat-sub">20 Products</div>
+    </a>
+    <a href="#products" class="cat-item">
+      <span class="cat-emoji">🎮</span>
+      <div class="cat-title">Gaming</div>
+      <div class="cat-sub">30 Products</div>
+    </a>
   </div>
 </div>
 
@@ -788,58 +768,6 @@ footer{background:var(--light);border-top:1px solid var(--border);width:100%}
     <button class="testi-btn" id="testiPrev">←</button>
     <div class="testi-dots" id="testiDots"></div>
     <button class="testi-btn" id="testiNext">→</button>
-  </div>
-</div>
-
-<!-- ROI CALCULATOR -->
-<div class="roi-section" id="roi">
-  <div class="roi-inner">
-    <div class="sec-head" style="text-align:center">
-      <div class="sec-eyebrow" style="color:#86b7fe">For Business Owners</div>
-      <div class="sec-title" style="color:white">💰 Website ROI Calculator</div>
-      <div class="sec-sub" style="color:rgba(255,255,255,0.5);margin:0 auto">Is website se aap kitna extra kamao ge? Khud calculate karo.</div>
-    </div>
-    <div class="roi-grid">
-      <div class="roi-form-card">
-        <div class="roi-field">
-          <label>Aaj kitne customers WhatsApp karte hain? (per day)</label>
-          <input type="number" id="roi-customers" placeholder="e.g. 5" min="1" value="5">
-        </div>
-        <div class="roi-field">
-          <label>Average order value (Rs.)</label>
-          <input type="number" id="roi-order" placeholder="e.g. 2500" min="100" value="2500">
-        </div>
-        <div class="roi-field">
-          <label>Website se kitne % zyada customers expect karte ho?</label>
-          <select id="roi-growth">
-            <option value="20">Conservative — 20% more customers</option>
-            <option value="40" selected>Realistic — 40% more customers</option>
-            <option value="70">Optimistic — 70% more customers</option>
-            <option value="100">Aggressive — 2x more customers</option>
-          </select>
-        </div>
-        <div class="roi-field">
-          <label>Website ka monthly charge (Rs.)</label>
-          <input type="number" id="roi-cost" placeholder="e.g. 5000" min="0" value="5000">
-        </div>
-        <button class="roi-calc-btn" onclick="calcROI()">⚡ Calculate My Monthly Earnings</button>
-      </div>
-      <div class="roi-result-card">
-        <div class="roi-result-label">Extra Monthly Earnings</div>
-        <div class="roi-result-value" id="roi-extra">Rs. 0</div>
-        <div class="roi-result-sub" id="roi-sub">Fill the form and click Calculate</div>
-        <div class="roi-breakdown" id="roi-breakdown" style="display:none">
-          <div class="roi-row"><span class="roi-row-label">Current monthly sales</span><span class="roi-row-val" id="rb-current">—</span></div>
-          <div class="roi-row"><span class="roi-row-label">Sales with website</span><span class="roi-row-val pos" id="rb-new">—</span></div>
-          <div class="roi-row"><span class="roi-row-label">Website monthly cost</span><span class="roi-row-val neg" id="rb-cost">—</span></div>
-          <div class="roi-row" style="border-top:1px solid rgba(255,255,255,0.15);margin-top:0.5rem;padding-top:0.8rem"><span class="roi-row-label" style="font-weight:700;color:white">Net Monthly Profit</span><span class="roi-row-val pos" style="font-size:1rem" id="rb-net">—</span></div>
-          <div class="roi-row"><span class="roi-row-label">Yearly extra income</span><span class="roi-row-val pos" style="font-size:1rem" id="rb-year">—</span></div>
-        </div>
-        <div class="roi-note" id="roi-note" style="display:none">
-          <strong>✅ Website sirf ek baar ka investment hai.</strong> Ek baar bana lo — phir saalon tak customers khud aate rahen ge. Har mahine <span id="roi-payback"></span> mein cost recover ho jata hai.
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -1159,7 +1087,7 @@ render();
     const offset=cur*cardW;
     track.style.transform=`translateX(-${offset}px)`;
   }
-
+s
   function startAuto(){autoTimer=setInterval(()=>goTo(cur+1),3500)}
   function stopAuto(){clearInterval(autoTimer)}
 
@@ -1170,57 +1098,6 @@ render();
   goTo(0);
   startAuto();
 })();
-
-// ── URGENCY TIMER ──
-(function(){
-  const now=new Date();
-  const deadline=new Date(now.getFullYear(),now.getMonth(),now.getDate(),23,59,59);
-  function pad(n){return String(n).padStart(2,'0')}
-  function tick(){
-    const diff=Math.max(0,deadline-new Date());
-    document.getElementById('th').textContent=pad(Math.floor(diff/3600000));
-    document.getElementById('tm').textContent=pad(Math.floor((diff%3600000)/60000));
-    document.getElementById('ts').textContent=pad(Math.floor((diff%60000)/1000));
-  }
-  tick();setInterval(tick,1000);
-})();
-
-// ── ROI CALCULATOR ──
-function calcROI(){
-  const customers=parseFloat(document.getElementById('roi-customers').value)||0;
-  const order=parseFloat(document.getElementById('roi-order').value)||0;
-  const growth=parseFloat(document.getElementById('roi-growth').value)||40;
-  const cost=parseFloat(document.getElementById('roi-cost').value)||0;
-
-  const currentMonthly=customers*30*order;
-  const extraCustomers=customers*(growth/100);
-  const newMonthly=(customers+extraCustomers)*30*order;
-  const extraMonthly=newMonthly-currentMonthly-cost;
-  const yearlyExtra=extraMonthly*12;
-  const paybackDays=cost>0?Math.ceil(cost/(extraMonthly/30)):0;
-
-  function fmt(n){return'Rs. '+Math.round(n).toLocaleString('en-PK')}
-
-  document.getElementById('roi-extra').textContent=fmt(Math.max(0,extraMonthly));
-  document.getElementById('roi-sub').textContent=extraMonthly>0
-    ?`Per month — after deducting website cost`
-    :`Increase customers or lower cost for profit`;
-
-  document.getElementById('rb-current').textContent=fmt(currentMonthly);
-  document.getElementById('rb-new').textContent=fmt(newMonthly);
-  document.getElementById('rb-cost').textContent='− '+fmt(cost);
-  document.getElementById('rb-net').textContent=fmt(Math.max(0,extraMonthly));
-  document.getElementById('rb-year').textContent=fmt(Math.max(0,yearlyExtra));
-  document.getElementById('roi-payback').textContent=paybackDays>0?`${paybackDays} din`:'no time';
-  document.getElementById('roi-breakdown').style.display='block';
-  document.getElementById('roi-note').style.display='block';
-
-  // animate the number
-  const el=document.getElementById('roi-extra');
-  el.style.transform='scale(1.08)';
-  el.style.transition='transform 0.3s';
-  setTimeout(()=>{el.style.transform='scale(1)'},300);
-}
 </script>
 </body>
 </html>
