@@ -64,6 +64,57 @@ nav{position:fixed;top:40px;width:100%;z-index:300;background:rgba(255,255,255,0
 .trust-item{display:flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.9);flex-shrink:0}
 .trust-dot{width:4px;height:4px;background:var(--blue);border-radius:50%;flex-shrink:0}
 
+/* ── URGENCY TIMER ── */
+.urgency-bar{background:#fff8f0;border-top:1px solid #ffe0c2;border-bottom:1px solid #ffe0c2;padding:0.9rem 2rem;text-align:center}
+.urgency-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap}
+.urgency-label{font-size:0.82rem;font-weight:600;color:#b45309}
+.urgency-label strong{color:#92400e}
+.timer-blocks{display:flex;align-items:center;gap:0.4rem}
+.tblock{background:white;border:1.5px solid #fed7aa;border-radius:8px;padding:0.35rem 0.7rem;text-align:center;min-width:48px}
+.tblock-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:#b45309;line-height:1;display:block}
+.tblock-label{font-size:0.55rem;text-transform:uppercase;letter-spacing:0.5px;color:#d97706;font-weight:600}
+.tsep{font-size:1.2rem;font-weight:800;color:#f59e0b;margin-bottom:0.5rem}
+.urgency-cta{background:#f59e0b;color:white;padding:0.4rem 1rem;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none;transition:background 0.2s;white-space:nowrap}
+.urgency-cta:hover{background:#d97706}
+
+/* ── ROI CALCULATOR ── */
+.roi-section{background:var(--text);padding:5rem 2rem}
+.roi-inner{max-width:1000px;margin:0 auto}
+.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:3rem}
+.roi-form-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:2rem}
+.roi-result-card{background:var(--blue);border-radius:24px;padding:2rem;position:relative;overflow:hidden}
+.roi-result-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.08);border-radius:50%}
+.roi-result-card::after{content:'';position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;background:rgba(255,255,255,0.05);border-radius:50%}
+.roi-field{margin-bottom:1.2rem}
+.roi-field label{display:block;font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.5px}
+.roi-field input,.roi-field select{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:0.65rem 1rem;color:white;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.2s}
+.roi-field input:focus,.roi-field select:focus{border-color:rgba(255,255,255,0.4)}
+.roi-field input::placeholder{color:rgba(255,255,255,0.3)}
+.roi-field select option{background:#1d1d1f;color:white}
+.roi-calc-btn{width:100%;background:var(--blue);color:white;border:none;border-radius:10px;padding:0.8rem;font-size:0.9rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
+.roi-calc-btn:hover{background:var(--blue2)}
+.roi-result-label{font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem}
+.roi-result-value{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:800;color:white;letter-spacing:-1.5px;line-height:1;margin-bottom:0.2rem;position:relative;z-index:1}
+.roi-result-sub{font-size:0.78rem;color:rgba(255,255,255,0.65);margin-bottom:2rem;position:relative;z-index:1}
+.roi-breakdown{border-top:1px solid rgba(255,255,255,0.15);padding-top:1.2rem;position:relative;z-index:1}
+.roi-row{display:flex;justify-content:space-between;align-items:center;padding:0.4rem 0;font-size:0.82rem}
+.roi-row-label{color:rgba(255,255,255,0.6)}
+.roi-row-val{font-weight:700;color:white}
+.roi-row-val.pos{color:#4ade80}
+.roi-row-val.neg{color:#fca5a5}
+.roi-note{margin-top:1.5rem;background:rgba(255,255,255,0.08);border-radius:10px;padding:0.9rem 1rem;font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:1.6;position:relative;z-index:1}
+.roi-note strong{color:white}
+@media(max-width:768px){
+  .urgency-inner{gap:0.8rem}
+  .roi-grid{grid-template-columns:1fr;gap:1.5rem}
+  .roi-result-value{font-size:2rem}
+}
+@media(max-width:480px){
+  .urgency-bar{padding:0.7rem 1rem}
+  .tblock-num{font-size:1rem}
+  .tblock{min-width:38px;padding:0.3rem 0.5rem}
+}
+
 /* ── CATEGORIES ── */
 .section{max-width:1200px;margin:0 auto;padding:5rem 2rem}
 .sec-head{text-align:center;margin-bottom:3rem}
@@ -568,6 +619,21 @@ footer{background:var(--light);border-top:1px solid var(--border)}
   </div>
 </div>
 
+<!-- URGENCY TIMER -->
+<div class="urgency-bar">
+  <div class="urgency-inner">
+    <div class="urgency-label">⚡ <strong>Flash Sale Ending In:</strong> Free delivery + 10% off on all orders today!</div>
+    <div class="timer-blocks">
+      <div class="tblock"><span class="tblock-num" id="th">00</span><span class="tblock-label">Hours</span></div>
+      <span class="tsep">:</span>
+      <div class="tblock"><span class="tblock-num" id="tm">00</span><span class="tblock-label">Mins</span></div>
+      <span class="tsep">:</span>
+      <div class="tblock"><span class="tblock-num" id="ts">00</span><span class="tblock-label">Secs</span></div>
+    </div>
+    <a href="https://wa.me/923001234567" class="urgency-cta" target="_blank">Order Now →</a>
+  </div>
+</div>
+
 <!-- CATEGORIES -->
 <div class="section" id="categories">
   <div class="sec-head">
@@ -768,6 +834,58 @@ footer{background:var(--light);border-top:1px solid var(--border)}
     <button class="testi-btn" id="testiPrev">←</button>
     <div class="testi-dots" id="testiDots"></div>
     <button class="testi-btn" id="testiNext">→</button>
+  </div>
+</div>
+
+<!-- ROI CALCULATOR -->
+<div class="roi-section" id="roi">
+  <div class="roi-inner">
+    <div class="sec-head" style="text-align:center">
+      <div class="sec-eyebrow" style="color:#86b7fe">For Business Owners</div>
+      <div class="sec-title" style="color:white">💰 Website ROI Calculator</div>
+      <div class="sec-sub" style="color:rgba(255,255,255,0.5);margin:0 auto">Is website se aap kitna extra kamao ge? Khud calculate karo.</div>
+    </div>
+    <div class="roi-grid">
+      <div class="roi-form-card">
+        <div class="roi-field">
+          <label>Aaj kitne customers WhatsApp karte hain? (per day)</label>
+          <input type="number" id="roi-customers" placeholder="e.g. 5" min="1" value="5">
+        </div>
+        <div class="roi-field">
+          <label>Average order value (Rs.)</label>
+          <input type="number" id="roi-order" placeholder="e.g. 2500" min="100" value="2500">
+        </div>
+        <div class="roi-field">
+          <label>Website se kitne % zyada customers expect karte ho?</label>
+          <select id="roi-growth">
+            <option value="20">Conservative — 20% more customers</option>
+            <option value="40" selected>Realistic — 40% more customers</option>
+            <option value="70">Optimistic — 70% more customers</option>
+            <option value="100">Aggressive — 2x more customers</option>
+          </select>
+        </div>
+        <div class="roi-field">
+          <label>Website ka monthly charge (Rs.)</label>
+          <input type="number" id="roi-cost" placeholder="e.g. 5000" min="0" value="5000">
+        </div>
+        <button class="roi-calc-btn" onclick="calcROI()">⚡ Calculate My Monthly Earnings</button>
+      </div>
+      <div class="roi-result-card">
+        <div class="roi-result-label">Extra Monthly Earnings</div>
+        <div class="roi-result-value" id="roi-extra">Rs. 0</div>
+        <div class="roi-result-sub" id="roi-sub">Fill the form and click Calculate</div>
+        <div class="roi-breakdown" id="roi-breakdown" style="display:none">
+          <div class="roi-row"><span class="roi-row-label">Current monthly sales</span><span class="roi-row-val" id="rb-current">—</span></div>
+          <div class="roi-row"><span class="roi-row-label">Sales with website</span><span class="roi-row-val pos" id="rb-new">—</span></div>
+          <div class="roi-row"><span class="roi-row-label">Website monthly cost</span><span class="roi-row-val neg" id="rb-cost">—</span></div>
+          <div class="roi-row" style="border-top:1px solid rgba(255,255,255,0.15);margin-top:0.5rem;padding-top:0.8rem"><span class="roi-row-label" style="font-weight:700;color:white">Net Monthly Profit</span><span class="roi-row-val pos" style="font-size:1rem" id="rb-net">—</span></div>
+          <div class="roi-row"><span class="roi-row-label">Yearly extra income</span><span class="roi-row-val pos" style="font-size:1rem" id="rb-year">—</span></div>
+        </div>
+        <div class="roi-note" id="roi-note" style="display:none">
+          <strong>✅ Website sirf ek baar ka investment hai.</strong> Ek baar bana lo — phir saalon tak customers khud aate rahen ge. Har mahine <span id="roi-payback"></span> mein cost recover ho jata hai.
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1087,7 +1205,7 @@ render();
     const offset=cur*cardW;
     track.style.transform=`translateX(-${offset}px)`;
   }
-s
+
   function startAuto(){autoTimer=setInterval(()=>goTo(cur+1),3500)}
   function stopAuto(){clearInterval(autoTimer)}
 
@@ -1098,6 +1216,57 @@ s
   goTo(0);
   startAuto();
 })();
+
+// ── URGENCY TIMER ──
+(function(){
+  const now=new Date();
+  const deadline=new Date(now.getFullYear(),now.getMonth(),now.getDate(),23,59,59);
+  function pad(n){return String(n).padStart(2,'0')}
+  function tick(){
+    const diff=Math.max(0,deadline-new Date());
+    document.getElementById('th').textContent=pad(Math.floor(diff/3600000));
+    document.getElementById('tm').textContent=pad(Math.floor((diff%3600000)/60000));
+    document.getElementById('ts').textContent=pad(Math.floor((diff%60000)/1000));
+  }
+  tick();setInterval(tick,1000);
+})();
+
+// ── ROI CALCULATOR ──
+function calcROI(){
+  const customers=parseFloat(document.getElementById('roi-customers').value)||0;
+  const order=parseFloat(document.getElementById('roi-order').value)||0;
+  const growth=parseFloat(document.getElementById('roi-growth').value)||40;
+  const cost=parseFloat(document.getElementById('roi-cost').value)||0;
+
+  const currentMonthly=customers*30*order;
+  const extraCustomers=customers*(growth/100);
+  const newMonthly=(customers+extraCustomers)*30*order;
+  const extraMonthly=newMonthly-currentMonthly-cost;
+  const yearlyExtra=extraMonthly*12;
+  const paybackDays=cost>0?Math.ceil(cost/(extraMonthly/30)):0;
+
+  function fmt(n){return'Rs. '+Math.round(n).toLocaleString('en-PK')}
+
+  document.getElementById('roi-extra').textContent=fmt(Math.max(0,extraMonthly));
+  document.getElementById('roi-sub').textContent=extraMonthly>0
+    ?`Per month — after deducting website cost`
+    :`Increase customers or lower cost for profit`;
+
+  document.getElementById('rb-current').textContent=fmt(currentMonthly);
+  document.getElementById('rb-new').textContent=fmt(newMonthly);
+  document.getElementById('rb-cost').textContent='− '+fmt(cost);
+  document.getElementById('rb-net').textContent=fmt(Math.max(0,extraMonthly));
+  document.getElementById('rb-year').textContent=fmt(Math.max(0,yearlyExtra));
+  document.getElementById('roi-payback').textContent=paybackDays>0?`${paybackDays} din`:'no time';
+  document.getElementById('roi-breakdown').style.display='block';
+  document.getElementById('roi-note').style.display='block';
+
+  // animate the number
+  const el=document.getElementById('roi-extra');
+  el.style.transform='scale(1.08)';
+  el.style.transition='transform 0.3s';
+  setTimeout(()=>{el.style.transform='scale(1)'},300);
+}
 </script>
 </body>
 </html>
