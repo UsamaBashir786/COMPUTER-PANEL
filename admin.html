@@ -18,7 +18,7 @@ body{background:var(--white);color:var(--text);font-family:'Plus Jakarta Sans',s
 a{text-decoration:none;color:inherit}
 
 /* ── NAV ── */
-nav{position:fixed;top:40px;width:100%;z-index:300;background:rgba(255,255,255,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(255,255,255,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:62px}
 .logo{display:flex;align-items:center;gap:10px}
 .logo-mark{width:34px;height:34px;background:var(--text);border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -39,7 +39,7 @@ nav{position:fixed;top:40px;width:100%;z-index:300;background:rgba(255,255,255,0
 .nav-wa svg{width:14px;height:14px;fill:white;flex-shrink:0}
 
 /* ── HERO ── */
-.hero{text-align:center;padding:175px 2rem 90px;background:var(--white)}
+.hero{text-align:center;padding:150px 2rem 90px;background:var(--white)}
 .hero-label{font-size:0.78rem;font-weight:600;color:var(--blue);letter-spacing:0.5px;margin-bottom:1.2rem;display:block;text-transform:uppercase}
 .hero h1{font-size:clamp(3rem,7.5vw,6.5rem);font-weight:800;line-height:1.02;letter-spacing:-3px;color:var(--text);margin-bottom:1.3rem}
 .hero h1 em{color:var(--blue);font-style:normal}
@@ -223,85 +223,6 @@ footer{background:var(--light);border-top:1px solid var(--border)}
 /* divider */
 .section-divider{height:1px;background:var(--border);max-width:1200px;margin:0 auto}
 
-/* ── ANNOUNCEMENT BAR ── */
-.ann-bar{background:linear-gradient(90deg,#0055b3,#0071e3,#0055b3);padding:0.55rem 1rem;text-align:center;position:relative;z-index:400;overflow:hidden}
-.ann-bar-inner{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
-.ann-text{font-size:0.8rem;font-weight:600;color:white;letter-spacing:0.2px}
-.ann-text strong{color:#ffd60a}
-.ann-close{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1rem;line-height:1;padding:0.2rem 0.4rem}
-.ann-close:hover{color:white}
-.ann-badge{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:0.15rem 0.65rem;font-size:0.7rem;font-weight:700;color:white;letter-spacing:0.5px;text-transform:uppercase}
-
-/* ── FLOATING WHATSAPP ── */
-.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:0.7rem}
-.wa-float-btn{width:58px;height:58px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,0.45);cursor:pointer;transition:transform 0.2s;text-decoration:none}
-.wa-float-btn:hover{transform:scale(1.1)}
-.wa-float-btn svg{width:30px;height:30px;fill:white}
-.wa-float-tooltip{background:var(--text);color:white;font-size:0.78rem;font-weight:600;padding:0.45rem 0.9rem;border-radius:8px;white-space:nowrap;opacity:0;transform:translateX(10px);transition:all 0.25s;pointer-events:none}
-.wa-float:hover .wa-float-tooltip{opacity:1;transform:translateX(0)}
-.wa-pulse{position:absolute;width:58px;height:58px;border-radius:50%;background:var(--wa);animation:waPulse 2.5s ease-out infinite;pointer-events:none}
-@keyframes waPulse{0%{transform:scale(1);opacity:0.6}100%{transform:scale(1.9);opacity:0}}
-
-/* ── PRODUCT SEARCH & FILTER ── */
-.filter-bar{background:white;border-bottom:1px solid var(--border);padding:1rem 0;position:sticky;top:102px;z-index:100}
-.filter-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-.filter-search{flex:1;min-width:200px;display:flex;align-items:center;gap:8px;background:var(--light);border:1.5px solid var(--border);border-radius:10px;padding:0.55rem 1rem;transition:border 0.2s}
-.filter-search:focus-within{border-color:var(--blue)}
-.filter-search svg{width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round;flex-shrink:0}
-.filter-search input{background:none;border:none;outline:none;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.88rem;color:var(--text);width:100%}
-.filter-search input::placeholder{color:var(--muted)}
-.filter-chips{display:flex;gap:0.5rem;flex-wrap:wrap}
-.fchip{background:var(--light);border:1.5px solid var(--border);border-radius:50px;padding:0.38rem 1rem;font-size:0.78rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all 0.2s;white-space:nowrap}
-.fchip:hover{border-color:var(--blue);color:var(--blue)}
-.fchip.active{background:var(--blue);border-color:var(--blue);color:white}
-.filter-count{font-size:0.78rem;color:var(--muted);margin-left:auto;white-space:nowrap}
-.no-results{text-align:center;padding:3rem;color:var(--muted);font-size:0.95rem;display:none}
-.no-results.show{display:block}
-
-/* ── ADMIN PANEL ── */
-.admin-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000;backdrop-filter:blur(8px)}
-.admin-overlay.open{display:flex}
-.admin-panel{background:white;width:100%;max-width:960px;margin:auto;border-radius:24px;overflow:hidden;max-height:90vh;display:flex;flex-direction:column}
-.admin-header{background:var(--text);padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.admin-header h2{font-size:1.1rem;font-weight:700;color:white;letter-spacing:-0.3px}
-.admin-header-right{display:flex;align-items:center;gap:0.8rem}
-.admin-close{background:rgba(255,255,255,0.12);border:none;color:white;width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}
-.admin-close:hover{background:rgba(255,255,255,0.22)}
-.admin-body{display:grid;grid-template-columns:1fr 1.4fr;flex:1;overflow:hidden}
-.admin-left{border-right:1px solid var(--border);overflow-y:auto;padding:1.5rem}
-.admin-left h3{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:1rem}
-.admin-prod-list{display:flex;flex-direction:column;gap:0.5rem}
-.admin-prod-item{display:flex;align-items:center;gap:10px;padding:0.7rem 0.9rem;border-radius:10px;cursor:pointer;border:1.5px solid transparent;transition:all 0.2s}
-.admin-prod-item:hover{background:var(--light)}
-.admin-prod-item.selected{background:var(--blue-soft);border-color:var(--blue)}
-.api-emoji{font-size:1.5rem;flex-shrink:0}
-.api-info{flex:1;min-width:0}
-.api-name{font-size:0.82rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.api-price{font-size:0.72rem;color:var(--blue);font-weight:600}
-.api-del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.85rem;padding:0.2rem 0.4rem;border-radius:4px;transition:all 0.2s;flex-shrink:0}
-.api-del:hover{background:#fee2e2;color:#dc2626}
-.admin-add-btn{width:100%;margin-top:1rem;background:var(--blue);color:white;border:none;border-radius:10px;padding:0.7rem;font-size:0.85rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:background 0.2s}
-.admin-add-btn:hover{background:var(--blue2)}
-.admin-right{overflow-y:auto;padding:1.5rem}
-.admin-right h3{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:1.2rem}
-.admin-form{display:flex;flex-direction:column;gap:1rem}
-.afield{display:flex;flex-direction:column;gap:5px}
-.afield label{font-size:0.78rem;font-weight:600;color:var(--text)}
-.afield input,.afield textarea,.afield select{background:var(--light);border:1.5px solid var(--border);border-radius:8px;padding:0.6rem 0.85rem;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.85rem;outline:none;transition:border 0.2s}
-.afield input:focus,.afield textarea:focus,.afield select:focus{border-color:var(--blue);background:white}
-.afield textarea{resize:none;height:80px}
-.aform-row{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
-.aform-actions{display:flex;gap:0.7rem;margin-top:0.5rem}
-.asave{flex:1;background:var(--blue);color:white;border:none;border-radius:8px;padding:0.7rem;font-size:0.85rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:background 0.2s}
-.asave:hover{background:var(--blue2)}
-.acancel{background:var(--light);color:var(--muted);border:1.5px solid var(--border);border-radius:8px;padding:0.7rem 1.2rem;font-size:0.85rem;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer}
-.admin-empty{text-align:center;padding:3rem 1rem;color:var(--muted)}
-.admin-empty div{font-size:2.5rem;margin-bottom:0.5rem}
-.admin-trigger{position:fixed;bottom:2rem;left:2rem;z-index:998;background:var(--text);color:white;border:none;border-radius:12px;padding:0.6rem 1.1rem;font-size:0.8rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:transform 0.2s}
-.admin-trigger:hover{transform:translateY(-2px)}
-.saved-toast{position:fixed;bottom:5rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:white;padding:0.7rem 1.5rem;border-radius:50px;font-size:0.82rem;font-weight:600;opacity:0;transition:all 0.3s;z-index:2000;pointer-events:none}
-.saved-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
 @media(max-width:1024px){
   .nav-links{display:none}
   .hero{grid-template-columns:1fr;padding-top:90px}
@@ -320,16 +241,6 @@ footer{background:var(--light);border-top:1px solid var(--border)}
 </style>
 </head>
 <body>
-
-<!-- ANNOUNCEMENT BAR -->
-<div class="ann-bar" id="annBar">
-  <div class="ann-bar-inner">
-    <span class="ann-badge">🔥 Limited Time</span>
-    <span class="ann-text">Get <strong>Free Delivery</strong> on orders above Rs. 2,000 in Sahiwal — WhatsApp us now!</span>
-    <span class="ann-badge">⚡ Today Only</span>
-  </div>
-  <button class="ann-close" onclick="document.getElementById('annBar').style.display='none';document.querySelector('nav').style.top='0'">✕</button>
-</div>
 
 <!-- NAV -->
 <nav>
@@ -436,25 +347,6 @@ footer{background:var(--light);border-top:1px solid var(--border)}
 
 <div class="section-divider"></div>
 
-<!-- FILTER BAR -->
-<div class="filter-bar">
-  <div class="filter-inner">
-    <div class="filter-search">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="searchInput" placeholder="Search products by name or brand...">
-    </div>
-    <div class="filter-chips">
-      <div class="fchip active" data-cat="all">All</div>
-      <div class="fchip" data-cat="Mouse">Mouse</div>
-      <div class="fchip" data-cat="Keyboard">Keyboard</div>
-      <div class="fchip" data-cat="Headphones">Headphones</div>
-      <div class="fchip" data-cat="Charger">Charger</div>
-      <div class="fchip" data-cat="Gaming">Gaming</div>
-    </div>
-    <div class="filter-count" id="filterCount">Showing 8 products</div>
-  </div>
-</div>
-
 <!-- PRODUCTS -->
 <div class="products-bg" id="products">
   <div class="products-inner">
@@ -467,7 +359,12 @@ footer{background:var(--light);border-top:1px solid var(--border)}
       <a href="#" class="see-all">View All Products →</a>
     </div>
     <div class="prods-grid" id="productGrid"></div>
-    <div class="no-results" id="noResults">😕 No products found. Try a different search or category.</div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- WHY US -->
 <div class="why-section" id="about">
   <div class="why-inner">
     <div class="sec-head" style="text-align:left">
@@ -710,102 +607,48 @@ footer{background:var(--light);border-top:1px solid var(--border)}
   </div>
 </div>
 
-<!-- FLOATING WHATSAPP -->
-<div class="wa-float">
-  <div class="wa-float-tooltip">Order on WhatsApp</div>
-  <a href="https://wa.me/923001234567" class="wa-float-btn" target="_blank">
-    <div class="wa-pulse"></div>
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.855L.057 23.25l5.522-1.445A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.003-1.374l-.359-.213-3.276.859.874-3.194-.233-.369A9.796 9.796 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
-  </a>
-</div>
-
-<!-- ADMIN TRIGGER -->
-<button class="admin-trigger" onclick="openAdmin()">⚙️ Admin Panel</button>
-
-<!-- SAVED TOAST -->
-<div class="saved-toast" id="savedToast">✅ Changes saved successfully!</div>
-
-<!-- ADMIN PANEL -->
-<div class="admin-overlay" id="adminOverlay">
-  <div class="admin-panel">
-    <div class="admin-header">
-      <h2>⚙️ Admin Panel — Computer Panel Sahiwal</h2>
-      <div class="admin-header-right">
-        <button class="admin-close" onclick="closeAdmin()">✕</button>
-      </div>
-    </div>
-    <div class="admin-body">
-      <div class="admin-left">
-        <h3>All Products</h3>
-        <div class="admin-prod-list" id="adminList"></div>
-        <button class="admin-add-btn" onclick="selectProduct(null)">+ Add New Product</button>
-      </div>
-      <div class="admin-right">
-        <h3 id="adminFormTitle">Select a product to edit</h3>
-        <div id="adminFormWrap">
-          <div class="admin-empty"><div>👈</div>Select a product from the list to edit, or add a new one.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
 const products=[
-  {id:1,emoji:"🖱️",name:"Logitech G102 Gaming Mouse",brand:"Logitech",category:"Mouse",price:"Rs. 2,800",old:"Rs. 3,500",tag:"Best Seller",tagClass:"",desc:"8000 DPI optical sensor ke saath smooth gaming experience. RGB lighting aur 6 programmable buttons. Lightweight design gaming ke liye perfect.",specs:[{k:"DPI",v:"200–8000"},{k:"Buttons",v:"6 Programmable"},{k:"Cable",v:"2.1m Braided"},{k:"OS",v:"Windows / Mac"}]},
-  {id:2,emoji:"⌨️",name:"Havit KB487L Mechanical",brand:"Havit",category:"Keyboard",price:"Rs. 4,500",old:"Rs. 5,200",tag:"Hot Deal",tagClass:"sale",desc:"Blue switch mechanical keyboard with rainbow backlight. Full-size 104-key layout, durable build, aur smooth typing feel.",specs:[{k:"Switch",v:"Blue Mechanical"},{k:"Keys",v:"104 Full Size"},{k:"Backlight",v:"Rainbow RGB"},{k:"Interface",v:"USB"}]},
-  {id:3,emoji:"🎧",name:"Redragon H510 Zeus Headset",brand:"Redragon",category:"Headphones",price:"Rs. 3,200",old:"Rs. 4,000",tag:"New",tagClass:"new",desc:"7.1 surround sound ke saath crystal clear audio. Noise cancelling mic aur comfortable earcups. Gaming aur calls dono ke liye ideal.",specs:[{k:"Driver",v:"53mm"},{k:"Frequency",v:"20Hz–20KHz"},{k:"Mic",v:"Noise Cancelling"},{k:"Port",v:"USB + 3.5mm"}]},
-  {id:4,emoji:"🔌",name:"65W GaN Fast Charger",brand:"Anker",category:"Charger",price:"Rs. 1,800",old:"Rs. 2,200",tag:"Sale",tagClass:"sale",desc:"65W super fast charging compatible with all laptops and phones. GaN technology — compact size, powerful output.",specs:[{k:"Power",v:"65W"},{k:"Ports",v:"2x USB-C + 1x USB-A"},{k:"Tech",v:"GaN III"},{k:"Safety",v:"Multi-Protect"}]},
-  {id:5,emoji:"🟫",name:"Fantech MP80 XL Mousepad",brand:"Fantech",category:"Mouse",price:"Rs. 950",old:"Rs. 1,200",tag:"Popular",tagClass:"",desc:"Extra large 800x300mm gaming mousepad. Smooth surface for precision with non-slip rubber base. Setup ka perfect companion.",specs:[{k:"Size",v:"800x300mm"},{k:"Thickness",v:"4mm"},{k:"Surface",v:"Micro-Weave"},{k:"Base",v:"Non-Slip Rubber"}]},
-  {id:6,emoji:"📷",name:"A4tech 1080p Webcam",brand:"A4tech",category:"Gaming",price:"Rs. 3,500",old:"Rs. 4,200",tag:"Hot",tagClass:"sale",desc:"Full HD 1080p with auto-focus aur built-in stereo mic. Online classes, meetings, aur streaming ke liye best pick.",specs:[{k:"Resolution",v:"1080p FHD"},{k:"FPS",v:"30fps"},{k:"Focus",v:"Auto"},{k:"Mic",v:"Built-in Stereo"}]},
-  {id:7,emoji:"📡",name:"TP-Link Mini WiFi Adapter",brand:"TP-Link",category:"Gaming",price:"Rs. 1,400",old:"Rs. 1,800",tag:"Sale",tagClass:"sale",desc:"300Mbps mini USB WiFi adapter. Plug-and-play — koi driver install nahi. Desktop ya laptop dono ke liye.",specs:[{k:"Speed",v:"300Mbps"},{k:"Band",v:"2.4GHz"},{k:"Interface",v:"USB 2.0"},{k:"Form",v:"Nano Mini"}]},
-  {id:8,emoji:"🎮",name:"Rapoo VT200 Gaming Mouse",brand:"Rapoo",category:"Gaming",price:"Rs. 2,200",old:"Rs. 2,800",tag:"Budget Pick",tagClass:"",desc:"7200 DPI adjustable gaming mouse with 7 programmable buttons. RGB lighting aur ergonomic design for long sessions.",specs:[{k:"DPI",v:"200–7200"},{k:"Buttons",v:"7"},{k:"Rate",v:"1000Hz"},{k:"Weight",v:"130g"}]}
+  {id:1,emoji:"🖱️",name:"Logitech G102 Gaming Mouse",brand:"Logitech",price:"Rs. 2,800",old:"Rs. 3,500",tag:"Best Seller",tagClass:"",desc:"8000 DPI optical sensor ke saath smooth gaming experience. RGB lighting aur 6 programmable buttons. Lightweight design gaming ke liye perfect.",specs:[{k:"DPI",v:"200–8000"},{k:"Buttons",v:"6 Programmable"},{k:"Cable",v:"2.1m Braided"},{k:"OS",v:"Windows / Mac"}]},
+  {id:2,emoji:"⌨️",name:"Havit KB487L Mechanical",brand:"Havit",price:"Rs. 4,500",old:"Rs. 5,200",tag:"Hot Deal",tagClass:"sale",desc:"Blue switch mechanical keyboard with rainbow backlight. Full-size 104-key layout, durable build, aur smooth typing feel.",specs:[{k:"Switch",v:"Blue Mechanical"},{k:"Keys",v:"104 Full Size"},{k:"Backlight",v:"Rainbow RGB"},{k:"Interface",v:"USB"}]},
+  {id:3,emoji:"🎧",name:"Redragon H510 Zeus Headset",brand:"Redragon",price:"Rs. 3,200",old:"Rs. 4,000",tag:"New",tagClass:"new",desc:"7.1 surround sound ke saath crystal clear audio. Noise cancelling mic aur comfortable earcups. Gaming aur calls dono ke liye ideal.",specs:[{k:"Driver",v:"53mm"},{k:"Frequency",v:"20Hz–20KHz"},{k:"Mic",v:"Noise Cancelling"},{k:"Port",v:"USB + 3.5mm"}]},
+  {id:4,emoji:"🔌",name:"65W GaN Fast Charger",brand:"Anker",price:"Rs. 1,800",old:"Rs. 2,200",tag:"Sale",tagClass:"sale",desc:"65W super fast charging compatible with all laptops and phones. GaN technology — compact size, powerful output.",specs:[{k:"Power",v:"65W"},{k:"Ports",v:"2x USB-C + 1x USB-A"},{k:"Tech",v:"GaN III"},{k:"Safety",v:"Multi-Protect"}]},
+  {id:5,emoji:"🟫",name:"Fantech MP80 XL Mousepad",brand:"Fantech",price:"Rs. 950",old:"Rs. 1,200",tag:"Popular",tagClass:"",desc:"Extra large 800x300mm gaming mousepad. Smooth surface for precision with non-slip rubber base. Setup ka perfect companion.",specs:[{k:"Size",v:"800x300mm"},{k:"Thickness",v:"4mm"},{k:"Surface",v:"Micro-Weave"},{k:"Base",v:"Non-Slip Rubber"}]},
+  {id:6,emoji:"📷",name:"A4tech 1080p Webcam",brand:"A4tech",price:"Rs. 3,500",old:"Rs. 4,200",tag:"Hot",tagClass:"sale",desc:"Full HD 1080p with auto-focus aur built-in stereo mic. Online classes, meetings, aur streaming ke liye best pick.",specs:[{k:"Resolution",v:"1080p FHD"},{k:"FPS",v:"30fps"},{k:"Focus",v:"Auto"},{k:"Mic",v:"Built-in Stereo"}]},
+  {id:7,emoji:"📡",name:"TP-Link Mini WiFi Adapter",brand:"TP-Link",price:"Rs. 1,400",old:"Rs. 1,800",tag:"Sale",tagClass:"sale",desc:"300Mbps mini USB WiFi adapter. Plug-and-play — koi driver install nahi. Desktop ya laptop dono ke liye.",specs:[{k:"Speed",v:"300Mbps"},{k:"Band",v:"2.4GHz"},{k:"Interface",v:"USB 2.0"},{k:"Form",v:"Nano Mini"}]},
+  {id:8,emoji:"🎮",name:"Rapoo VT200 Gaming Mouse",brand:"Rapoo",price:"Rs. 2,200",old:"Rs. 2,800",tag:"Budget Pick",tagClass:"",desc:"7200 DPI adjustable gaming mouse with 7 programmable buttons. RGB lighting aur ergonomic design for long sessions.",specs:[{k:"DPI",v:"200–7200"},{k:"Buttons",v:"7"},{k:"Rate",v:"1000Hz"},{k:"Weight",v:"130g"}]}
 ];
 
-let activeFilter='all', searchTerm='';
-
-function getFiltered(){
-  return products.filter(p=>{
-    const mc=activeFilter==='all'||p.category===activeFilter;
-    const ms=!searchTerm||p.name.toLowerCase().includes(searchTerm)||p.brand.toLowerCase().includes(searchTerm);
-    return mc&&ms;
-  });
-}
-
 function render(){
-  const f=getFiltered();
-  const grid=document.getElementById('productGrid');
-  const nr=document.getElementById('noResults');
-  document.getElementById('filterCount').textContent=`Showing ${f.length} product${f.length!==1?'s':''}`;
-  if(!f.length){grid.innerHTML='';nr.classList.add('show');return;}
-  nr.classList.remove('show');
-  grid.innerHTML=f.map(p=>`
+  document.getElementById('productGrid').innerHTML=products.map(p=>`
     <div class="prod-card">
-      <div class="prod-img-area"><span class="prod-emoji-big">${p.emoji}</span><span class="prod-label ${p.tagClass}">${p.tag}</span></div>
+      <div class="prod-img-area">
+        <span class="prod-emoji-big">${p.emoji}</span>
+        <span class="prod-label ${p.tagClass}">${p.tag}</span>
+      </div>
       <div class="prod-info">
         <div class="prod-name">${p.name}</div>
-        <div class="prod-brand">${p.brand} · ${p.category}</div>
+        <div class="prod-brand">${p.brand}</div>
         <div class="prod-pricing"><span class="prod-price">${p.price}</span><span class="prod-old">${p.old}</span></div>
         <div class="prod-actions">
           <button class="pa-detail" onclick="openM(${p.id})">View Details</button>
-          <a class="pa-wa" href="https://wa.me/923001234567?text=Assalam%20Alaikum!%20Mujhe%20${encodeURIComponent(p.name)}%20chahiye.%20Price:%20${encodeURIComponent(p.price)}" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413z"/></svg> Order</a>
+          <a class="pa-wa" href="https://wa.me/923001234567?text=Assalam%20Alaikum!%20Mujhe%20${encodeURIComponent(p.name)}%20chahiye.%20Price:%20${encodeURIComponent(p.price)}" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413z"/></svg>
+            Order
+          </a>
         </div>
       </div>
-    </div>`).join('');
+    </div>
+  `).join('');
 }
 
-document.getElementById('searchInput').addEventListener('input',function(){searchTerm=this.value.toLowerCase().trim();render();});
-document.querySelectorAll('.fchip').forEach(c=>c.addEventListener('click',function(){
-  document.querySelectorAll('.fchip').forEach(x=>x.classList.remove('active'));
-  this.classList.add('active');activeFilter=this.dataset.cat;render();
-}));
-
 function openM(id){
-  const p=products.find(x=>x.id===id);if(!p)return;
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
   document.getElementById('mImg').innerHTML=`<span style="font-size:5.5rem">${p.emoji}</span>`;
   document.getElementById('mTag').textContent=p.tag;
   document.getElementById('mTitle').textContent=p.name;
-  document.getElementById('mBrand').textContent='Brand: '+p.brand+' · '+p.category;
+  document.getElementById('mBrand').textContent='Brand: '+p.brand;
   document.getElementById('mPrice').textContent=p.price;
   document.getElementById('mDesc').textContent=p.desc;
   document.getElementById('mSpecs').innerHTML=p.specs.map(s=>`<div class="spec-line"><span class="spec-k">${s.k}</span><span class="spec-v">${s.v}</span></div>`).join('');
@@ -813,72 +656,6 @@ function openM(id){
 }
 function closeM(){document.getElementById('modalBg').classList.remove('open')}
 document.getElementById('modalBg').addEventListener('click',function(e){if(e.target===this)closeM()});
-
-// ── ADMIN ──
-let editingId=null;
-function openAdmin(){document.getElementById('adminOverlay').classList.add('open');renderAdminList();}
-function closeAdmin(){document.getElementById('adminOverlay').classList.remove('open');}
-document.getElementById('adminOverlay').addEventListener('click',function(e){if(e.target===this)closeAdmin();});
-
-function renderAdminList(){
-  document.getElementById('adminList').innerHTML=products.map(p=>`
-    <div class="admin-prod-item ${editingId===p.id?'selected':''}" onclick="selectProduct(${p.id})">
-      <span class="api-emoji">${p.emoji}</span>
-      <div class="api-info"><div class="api-name">${p.name}</div><div class="api-price">${p.price}</div></div>
-      <button class="api-del" onclick="event.stopPropagation();deleteProduct(${p.id})">🗑</button>
-    </div>`).join('');
-}
-
-function selectProduct(id){
-  editingId=id;renderAdminList();
-  const p=id?products.find(x=>x.id===id):null;
-  document.getElementById('adminFormTitle').textContent=p?'Edit Product':'Add New Product';
-  document.getElementById('adminFormWrap').innerHTML=`
-    <div class="admin-form">
-      <div class="aform-row">
-        <div class="afield"><label>Emoji</label><input id="af-emoji" value="${p?p.emoji:'📦'}"></div>
-        <div class="afield"><label>Category</label><select id="af-cat">${['Mouse','Keyboard','Headphones','Charger','Gaming'].map(c=>`<option ${p&&p.category===c?'selected':''}>${c}</option>`).join('')}</select></div>
-      </div>
-      <div class="afield"><label>Product Name</label><input id="af-name" value="${p?p.name:''}" placeholder="e.g. Logitech G102 Gaming Mouse"></div>
-      <div class="afield"><label>Brand</label><input id="af-brand" value="${p?p.brand:''}" placeholder="e.g. Logitech"></div>
-      <div class="aform-row">
-        <div class="afield"><label>Price</label><input id="af-price" value="${p?p.price:''}" placeholder="Rs. 2,500"></div>
-        <div class="afield"><label>Old Price</label><input id="af-old" value="${p?p.old:''}" placeholder="Rs. 3,000"></div>
-      </div>
-      <div class="aform-row">
-        <div class="afield"><label>Badge</label><input id="af-tag" value="${p?p.tag:''}" placeholder="Best Seller"></div>
-        <div class="afield"><label>Badge Color</label><select id="af-tagclass"><option value="" ${p&&!p.tagClass?'selected':''}>Blue</option><option value="sale" ${p&&p.tagClass==='sale'?'selected':''}>Red (Sale)</option><option value="new" ${p&&p.tagClass==='new'?'selected':''}>Green (New)</option></select></div>
-      </div>
-      <div class="afield"><label>Description</label><textarea id="af-desc">${p?p.desc:''}</textarea></div>
-      <div class="aform-actions">
-        <button class="asave" onclick="saveProduct()">💾 Save Product</button>
-        <button class="acancel" onclick="selectProduct(null);document.getElementById('adminFormTitle').textContent='Select a product';document.getElementById('adminFormWrap').innerHTML='<div class=admin-empty><div>👈</div>Select or add a product.</div>'">Cancel</button>
-      </div>
-    </div>`;
-}
-
-function saveProduct(){
-  const get=id=>document.getElementById(id).value.trim();
-  const name=get('af-name'),price=get('af-price');
-  if(!name||!price){alert('Name and price required!');return;}
-  const obj={emoji:get('af-emoji')||'📦',name,brand:get('af-brand'),category:document.getElementById('af-cat').value,price,old:get('af-old'),tag:get('af-tag')||'New',tagClass:document.getElementById('af-tagclass').value,desc:get('af-desc'),specs:[]};
-  if(editingId){const i=products.findIndex(x=>x.id===editingId);if(i>-1)products[i]={...products[i],...obj};}
-  else{obj.id=Math.max(...products.map(p=>p.id))+1;products.push(obj);}
-  render();renderAdminList();showToast('✅ Product saved!');
-}
-
-function deleteProduct(id){
-  if(!confirm('Delete this product?'))return;
-  products.splice(products.findIndex(x=>x.id===id),1);
-  if(editingId===id){editingId=null;document.getElementById('adminFormTitle').textContent='Select a product';document.getElementById('adminFormWrap').innerHTML='<div class="admin-empty"><div>👈</div>Select or add a product.</div>';}
-  render();renderAdminList();showToast('🗑️ Product deleted!');
-}
-
-function showToast(msg){
-  const t=document.getElementById('savedToast');t.textContent=msg||'✅ Done!';
-  t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);
-}
-
 render();
 
 // 3D TESTIMONIAL CAROUSEL
