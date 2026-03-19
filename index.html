@@ -18,7 +18,7 @@ body{background:var(--white);color:var(--text);font-family:'Plus Jakarta Sans',s
 a{text-decoration:none;color:inherit}
 
 /* ── NAV ── */
-nav{width:100%;z-index:300;background:rgba(255,255,255,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
+nav{position:fixed;top:40px;width:100%;z-index:300;background:rgba(255,255,255,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:62px}
 .logo{display:flex;align-items:center;gap:10px}
 .logo-mark{width:34px;height:34px;background:var(--text);border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -302,24 +302,205 @@ footer{background:var(--light);border-top:1px solid var(--border)}
 .saved-toast{position:fixed;bottom:5rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:white;padding:0.7rem 1.5rem;border-radius:50px;font-size:0.82rem;font-weight:600;opacity:0;transition:all 0.3s;z-index:2000;pointer-events:none}
 .saved-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* ════════════════════════════
+   RESPONSIVE — ALL SECTIONS
+════════════════════════════ */
+
+/* ── TABLET (max 1024px) ── */
 @media(max-width:1024px){
+  /* Nav */
   .nav-links{display:none}
-  .hero{grid-template-columns:1fr;padding-top:90px}
-  .hero-right{display:none}
-  .cats-row{grid-template-columns:repeat(3,1fr)}
+  .nav-search{display:none}
+
+  /* Hero */
+  .hero{padding:140px 1.5rem 70px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.5rem);letter-spacing:-2px}
+  .hero-stats{gap:3rem}
+
+  /* Sections padding */
+  .section{padding:4rem 1.5rem}
+  .products-inner{padding:4rem 1.5rem}
+  .why-inner{padding:4rem 1.5rem}
+  .contact-section{padding:4rem 1.5rem}
+  footer .footer-inner{padding:2.5rem 1.5rem 1.5rem}
+
+  /* Categories */
+  .cats-row{grid-template-columns:repeat(3,1fr);gap:0.8rem}
+
+  /* Products */
   .prods-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* Why Us */
   .why-grid{grid-template-columns:repeat(2,1fr)}
-  .contact-grid,.footer-top{grid-template-columns:1fr}
+
+  /* Contact */
+  .contact-grid{grid-template-columns:1fr;gap:2rem}
+
+  /* Footer */
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+
+  /* Modal */
   .modal-layout{grid-template-columns:1fr}
-  .modal-img-side{min-height:160px}
+  .modal-img-side{min-height:160px;border-right:none;border-bottom:1px solid var(--border)}
+
+  /* Admin */
+  .admin-body{grid-template-columns:1fr}
+  .admin-left{border-right:none;border-bottom:1px solid var(--border);max-height:200px}
+
+  /* Filter bar */
+  .filter-bar{top:102px}
+  .filter-count{display:none}
+
+  /* Testimonials */
+  .testi-card{flex:0 0 340px}
 }
-@media(max-width:600px){
-  .cats-row{grid-template-columns:repeat(2,1fr)}
+
+/* ── MOBILE (max 768px) ── */
+@media(max-width:768px){
+  /* Announcement bar */
+  .ann-badge:last-child{display:none}
+  .ann-text{font-size:0.72rem}
+
+  /* Nav */
+  nav{top:36px}
+  .nav-wa span{display:none}
+  .nav-wa{padding:0.42rem 0.7rem;border-radius:50%}
+
+  /* Hero */
+  .hero{padding:130px 1.2rem 60px}
+  .hero h1{font-size:clamp(2rem,8vw,3.5rem);letter-spacing:-1.5px}
+  .hero-tagline{font-size:0.95rem}
+  .hero-ctas{flex-direction:column;align-items:center}
+  .cta-primary,.cta-wa,.cta-ghost{width:100%;max-width:320px;justify-content:center}
+  .hero-stats{gap:1.5rem;justify-content:space-around}
+  .stat-val{font-size:1.8rem}
+
+  /* Trust banner */
+  .trust-banner{padding:0.7rem 1rem}
+
+  /* Section headings */
+  .sec-title{font-size:1.6rem}
+  .section{padding:3rem 1.2rem}
+  .products-inner,.why-inner,.contact-section{padding:3rem 1.2rem}
+
+  /* Categories */
+  .cats-row{grid-template-columns:repeat(2,1fr);gap:0.7rem}
+  .cat-item{padding:1.2rem 0.8rem}
+  .cat-emoji{font-size:1.8rem}
+
+  /* Filter bar */
+  .filter-bar{top:96px;padding:0.7rem 0}
+  .filter-inner{gap:0.6rem;padding:0 1.2rem}
+  .filter-chips{gap:0.4rem}
+  .fchip{font-size:0.72rem;padding:0.3rem 0.75rem}
+  .filter-count{display:none}
+
+  /* Products */
+  .prods-grid{grid-template-columns:repeat(2,1fr);gap:0.8rem}
+  .prod-img-area{height:130px}
+  .prod-emoji-big{font-size:3rem}
+  .prod-info{padding:0.8rem}
+  .prod-name{font-size:0.82rem}
+  .prod-price{font-size:1rem}
+
+  /* Why Us */
+  .why-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+  .why-card{padding:1.3rem}
+  .why-num{font-size:1.8rem}
+
+  /* Testimonials */
+  .testi-card{flex:0 0 280px}
+  .testi-stage{padding:1rem 0 2rem}
+
+  /* Contact */
+  .contact-grid{grid-template-columns:1fr}
+  .c-info-card{padding:1.5rem}
   .form-row{grid-template-columns:1fr}
+
+  /* Footer */
+  .footer-top{grid-template-columns:1fr;gap:1.5rem}
+  .footer-bottom{flex-direction:column;text-align:center;gap:0.4rem}
+
+  /* Modal */
+  .modal-box{border-radius:16px;margin:1rem}
+  .modal-content{padding:1.3rem}
+  .modal-title{font-size:1.1rem}
+  .modal-price{font-size:1.4rem}
+
+  /* Admin */
+  .admin-panel{margin:1rem;border-radius:16px}
+  .admin-body{grid-template-columns:1fr}
+  .admin-left{max-height:180px}
+  .aform-row{grid-template-columns:1fr}
+
+  /* Floating buttons */
+  .wa-float{bottom:1.2rem;right:1.2rem}
+  .admin-trigger{bottom:1.2rem;left:1.2rem;font-size:0.72rem;padding:0.5rem 0.85rem}
+}
+
+/* ── SMALL MOBILE (max 480px) ── */
+@media(max-width:480px){
+  /* Announcement */
+  .ann-bar{padding:0.5rem 2.5rem 0.5rem 0.8rem}
+  .ann-text{font-size:0.68rem}
+  .ann-badge{display:none}
+
+  /* Hero */
+  .hero{padding:115px 1rem 50px}
+  .hero h1{font-size:clamp(1.8rem,9vw,2.8rem);letter-spacing:-1px}
+  .hero-label{font-size:0.7rem}
+  .hero-tagline{font-size:0.88rem}
+  .hero-stats{flex-direction:column;gap:1.2rem;align-items:center;padding-top:2rem}
+  .stat-val{font-size:2rem}
+
+  /* Categories — single column on very small */
+  .cats-row{grid-template-columns:repeat(2,1fr)}
+
+  /* Products — single column */
+  .prods-grid{grid-template-columns:1fr}
+  .prod-img-area{height:160px}
+  .prod-emoji-big{font-size:4rem}
+
+  /* Why us — single column */
+  .why-grid{grid-template-columns:1fr}
+
+  /* Filter chips scroll */
+  .filter-inner{flex-wrap:nowrap;overflow-x:auto;padding-bottom:0.3rem}
+  .filter-inner::-webkit-scrollbar{display:none}
+  .filter-chips{flex-wrap:nowrap}
+  .fchip{flex-shrink:0}
+  .filter-search{min-width:160px}
+
+  /* Testimonials */
+  .testi-card{flex:0 0 260px}
+  .testi-controls{gap:0.7rem}
+
+  /* Nav */
+  .nav-wrap{padding:0 1rem}
+  .logo-name span{display:none}
+
+  /* Section padding */
+  .section,.products-inner,.why-inner,.contact-section{padding:2.5rem 1rem}
+  footer .footer-inner{padding:2rem 1rem 1rem}
+
+  /* Admin panel full screen on mobile */
+  .admin-overlay{padding:0}
+  .admin-panel{border-radius:0;max-height:100vh;margin:0;width:100%}
 }
 </style>
 </head>
 <body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar" id="annBar">
+  <div class="ann-bar-inner">
+    <span class="ann-badge">🔥 Limited Time</span>
+    <span class="ann-text">Get <strong>Free Delivery</strong> on orders above Rs. 2,000 in Sahiwal — WhatsApp us now!</span>
+    <span class="ann-badge">⚡ Today Only</span>
+  </div>
+  <button class="ann-close" onclick="document.getElementById('annBar').style.display='none';document.querySelector('nav').style.top='0'">✕</button>
+</div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-wrap">
