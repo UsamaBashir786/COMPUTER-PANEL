@@ -18,7 +18,7 @@ body{background:var(--white);color:var(--text);font-family:'Plus Jakarta Sans',s
 a{text-decoration:none;color:inherit}
 
 /* ── NAV ── */
-nav{position:fixed;top:40px;width:100%;z-index:300;background:rgba(255,255,255,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
+nav{position:fixed;top:0px;width:100%;z-index:300;background:rgba(255,255,255,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:62px}
 .logo{display:flex;align-items:center;gap:10px}
 .logo-mark{width:34px;height:34px;background:var(--text);border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -837,57 +837,6 @@ footer{background:var(--light);border-top:1px solid var(--border)}
   </div>
 </div>
 
-<!-- ROI CALCULATOR -->
-<div class="roi-section" id="roi">
-  <div class="roi-inner">
-    <div class="sec-head" style="text-align:center">
-      <div class="sec-eyebrow" style="color:#86b7fe">For Business Owners</div>
-      <div class="sec-title" style="color:white">💰 Website ROI Calculator</div>
-      <div class="sec-sub" style="color:rgba(255,255,255,0.5);margin:0 auto">Is website se aap kitna extra kamao ge? Khud calculate karo.</div>
-    </div>
-    <div class="roi-grid">
-      <div class="roi-form-card">
-        <div class="roi-field">
-          <label>Aaj kitne customers WhatsApp karte hain? (per day)</label>
-          <input type="number" id="roi-customers" placeholder="e.g. 5" min="1" value="5">
-        </div>
-        <div class="roi-field">
-          <label>Average order value (Rs.)</label>
-          <input type="number" id="roi-order" placeholder="e.g. 2500" min="100" value="2500">
-        </div>
-        <div class="roi-field">
-          <label>Website se kitne % zyada customers expect karte ho?</label>
-          <select id="roi-growth">
-            <option value="20">Conservative — 20% more customers</option>
-            <option value="40" selected>Realistic — 40% more customers</option>
-            <option value="70">Optimistic — 70% more customers</option>
-            <option value="100">Aggressive — 2x more customers</option>
-          </select>
-        </div>
-        <div class="roi-field">
-          <label>Website ka monthly charge (Rs.)</label>
-          <input type="number" id="roi-cost" placeholder="e.g. 5000" min="0" value="5000">
-        </div>
-        <button class="roi-calc-btn" onclick="calcROI()">⚡ Calculate My Monthly Earnings</button>
-      </div>
-      <div class="roi-result-card">
-        <div class="roi-result-label">Extra Monthly Earnings</div>
-        <div class="roi-result-value" id="roi-extra">Rs. 0</div>
-        <div class="roi-result-sub" id="roi-sub">Fill the form and click Calculate</div>
-        <div class="roi-breakdown" id="roi-breakdown" style="display:none">
-          <div class="roi-row"><span class="roi-row-label">Current monthly sales</span><span class="roi-row-val" id="rb-current">—</span></div>
-          <div class="roi-row"><span class="roi-row-label">Sales with website</span><span class="roi-row-val pos" id="rb-new">—</span></div>
-          <div class="roi-row"><span class="roi-row-label">Website monthly cost</span><span class="roi-row-val neg" id="rb-cost">—</span></div>
-          <div class="roi-row" style="border-top:1px solid rgba(255,255,255,0.15);margin-top:0.5rem;padding-top:0.8rem"><span class="roi-row-label" style="font-weight:700;color:white">Net Monthly Profit</span><span class="roi-row-val pos" style="font-size:1rem" id="rb-net">—</span></div>
-          <div class="roi-row"><span class="roi-row-label">Yearly extra income</span><span class="roi-row-val pos" style="font-size:1rem" id="rb-year">—</span></div>
-        </div>
-        <div class="roi-note" id="roi-note" style="display:none">
-          <strong>✅ Website sirf ek baar ka investment hai.</strong> Ek baar bana lo — phir saalon tak customers khud aate rahen ge. Har mahine <span id="roi-payback"></span> mein cost recover ho jata hai.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- CONTACT -->
 <div id="contact">
